@@ -1,4 +1,4 @@
-import { observable} from  'mobx'
+import { observable, action} from  'mobx'
 
 
 export class Reservation {
@@ -11,5 +11,13 @@ export class Reservation {
     constructor(name, numPeople) {
         this.name = name
         this.numPeople = numPeople
+    }
+
+    @action seatTable = ()=>{
+        this.seated = true
+    }
+
+    @action completeTable = ()=>{
+        this.completed = true
     }
 }

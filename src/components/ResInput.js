@@ -12,10 +12,12 @@ class ResInput extends Component {
             <div>
                 <input onChange = {this.inputHandler} 
                         name = "name"
+                        value={this.props.GeneralStore.name}
                         placeholder = "Name"/>
                 <input onChange = {this.inputHandler} 
                         name = "numPeople"
                         type = "number"
+                        value={this.props.GeneralStore.numPeople}
                         placeholder = "Number of people"/> 
             </div>
         )   
